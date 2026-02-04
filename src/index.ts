@@ -201,7 +201,44 @@ ${Object.entries(byConference)
   }
 );
 
-// Start the server
+import * as http from 'http';
+import * as fs from 'fs';
+import * as path from 'path';
+
+// Serve the server-card.json at /.well-known/mcp/server-card.json so external scanners (e.g., Smithery)
+// can discover server metadata by HTTP. Uses PORT environment variable when provided by platform.
+const WELL_KNOWN_PATH = '/.well-known/mcp/server-card.json';
+const WELL_KNOWN_PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
+
+const httpServer = http.createServer((req, res) => {
+  if (req.method === 'GET' && req.url === WELL_KNOWN_PATH) {
+    const filePath = path.resolve(process.cwd(), '.well-known/mcp/server-card.json');
+    fs.readFile(filePath, 'utf8', (err, data) => {
+      if (err) {
+        res.writeHead(404, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'server-card.json not found' }));
+        return;
+      }
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(data);
+    });
+    return;
+  }
+
+  // Optional: simple health check
+  if (req.method === 'GET' && req.url === '/health') {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('ok');
+    return;
+  }
+
+  res.writeHead(404, { 'Content-Type': 'text/plain' });
+  res.end('Not found');
+});
+
+httpServer.listen(WELL_KNOWN_PORT, () => console.error(`Well-known HTTP server listening on port ${WELL_KNOWN_PORT}`));
+
+// Start the MCP server
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
