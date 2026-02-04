@@ -7,3 +7,13 @@ startCommand:
   command: ["node", "dist/index.js"]
 env:
   NODE_ENV: "production"
+
+# Optional config schema shown to users when deploying (e.g. API keys)
+configSchema:
+  type: object
+  properties:
+    DBLP_API_KEY:
+      type: string
+      title: "DBLP API Key"
+      description: "Optional DBLP API key for improved DBLP queries (leave empty if not used)"
+  required: []

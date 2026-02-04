@@ -1,0 +1,15 @@
+{
+  "name": "security-paper-search",
+  "id": "songyaeji/security-paper-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for searching security conference papers (Security Paper MCP)",
+  "mcpVersion": "1",
+  "transport": "stdio",
+  "tools": [
+    {"name": "search_papers", "title": "Search Security Papers", "description": "Search for security research papers from supported conferences."},
+    {"name": "get_conference_papers", "title": "Get Conference Papers", "description": "Get all papers from a specific security conference in a specific year."},
+    {"name": "list_conferences", "title": "List Available Conferences", "description": "List supported security conferences."},
+    {"name": "get_stats", "title": "Get Paper Statistics", "description": "Get statistics about papers matching search criteria."},
+    {"name": "get_conference_info", "title": "Get Conference Info", "description": "Get detailed info about a conference."}
+  ]
+}
