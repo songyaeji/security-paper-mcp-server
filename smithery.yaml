@@ -1,0 +1,10 @@
+runtime: "container"
+build:
+  dockerfile: "Dockerfile"
+  dockerBuildPath: "."
+startCommand:
+  type: "stdio"
+  command: ["python", "server.py"]
+env:
+  # Add any environment variables here if needed
+  PYTHONUNBUFFERED: "1"-

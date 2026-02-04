@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "WebFetch(domain:www.ieee-security.org)",
+      "WebFetch(domain:www.usenix.org)",
+      "WebFetch(domain:www.sigsac.org)",
+      "WebFetch(domain:www.ndss-symposium.org)",
+      "WebFetch(domain:www.acsac.org)",
+      "WebFetch(domain:raid2020.org)",
+      "WebFetch(domain:raid2021.org)",
+      "WebFetch(domain:raid2022.cs.ucy.ac.cy)",
+      "WebFetch(domain:dl.acm.org)",
+      "WebFetch(domain:raid2023.org)",
+      "WebFetch(domain:raid2024.github.io)",
+      "WebFetch(domain:esorics2020.sccs.surrey.ac.uk)",
+      "WebFetch(domain:esorics2021.athene-center.de)",
+      "WebFetch(domain:esorics2022.compute.dtu.dk)",
+      "WebFetch(domain:esorics2023.org)",
+      "WebFetch(domain:esorics2024.org)",
+      "WebFetch(domain:dblp.org)",
+      "WebFetch(domain:www.surrey.ac.uk)"
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "conferences": {
+    "top_tier": {
+      "sp": {
+        "name": "IEEE Symposium on Security and Privacy (S&P/Oakland)",
+        "shortName": "S&P",
+        "tier": "top",
+        "urls": {
+          "2020": "https://www.ieee-security.org/TC/SP2020/program-papers.html",
+          "2021": "https://www.ieee-security.org/TC/SP2021/program-papers.html",
+          "2022": "https://www.ieee-security.org/TC/SP2022/program-papers.html",
+          "2023": "https://www.ieee-security.org/TC/SP2023/program-papers.html",
+          "2024": "https://www.ieee-security.org/TC/SP2024/program-papers.html",
+          "2025": "https://www.ieee-security.org/TC/SP2025/program-papers.html"
+        },
+        "dblpKey": "conf/sp"
+      },
+      "usenix": {
+        "name": "USENIX Security Symposium",
+        "shortName": "USENIX Security",
+        "tier": "top",
+        "urls": {
+          "2020": "https://www.usenix.org/conference/usenixsecurity20/technical-sessions",
+          "2021": "https://www.usenix.org/conference/usenixsecurity21/technical-sessions",
+          "2022": "https://www.usenix.org/conference/usenixsecurity22/technical-sessions",
+          "2023": "https://www.usenix.org/conference/usenixsecurity23/technical-sessions",
+          "2024": "https://www.usenix.org/conference/usenixsecurity24/technical-sessions",
+          "2025": "https://www.usenix.org/conference/usenixsecurity25/technical-sessions"
+        },
+        "dblpKey": "conf/uss"
+      },
+      "ccs": {
+        "name": "ACM Conference on Computer and Communications Security (CCS)",
+        "shortName": "CCS",
+        "tier": "top",
+        "urls": {
+          "2020": "https://www.sigsac.org/ccs/CCS2020/accepted-papers.html",
+          "2021": "https://www.sigsac.org/ccs/CCS2021/accepted-papers.html",
+          "2022": "https://www.sigsac.org/ccs/CCS2022/program/accepted-papers.html",
+          "2023": "https://www.sigsac.org/ccs/CCS2023/tocs/tocs-ccs23.html",
+          "2024": "https://www.sigsac.org/ccs/CCS2024/program/accepted-papers.html",
+          "2025": "https://www.sigsac.org/ccs/CCS2025/accepted-papers/"
+        },
+        "dblpKey": "conf/ccs"
+      },
+      "ndss": {
+        "name": "Network and Distributed System Security Symposium (NDSS)",
+        "shortName": "NDSS",
+        "tier": "top",
+        "urls": {
+          "2020": "https://www.ndss-symposium.org/ndss2020/accepted-papers/",
+          "2021": "https://www.ndss-symposium.org/ndss2021/accepted-papers/",
+          "2022": "https://www.ndss-symposium.org/ndss2022/accepted-papers/",
+          "2023": "https://www.ndss-symposium.org/ndss2023/accepted-papers/",
+          "2024": "https://www.ndss-symposium.org/ndss2024/accepted-papers/",
+          "2025": "https://www.ndss-symposium.org/ndss2025/accepted-papers/"
+        },
+        "dblpKey": "conf/ndss"
+      }
+    },
+    "second_tier": {
+      "acsac": {
+        "name": "Annual Computer Security Applications Conference (ACSAC)",
+        "shortName": "ACSAC",
+        "tier": "second",
+        "urls": {
+          "2020": "https://www.acsac.org/2020/program/papers/",
+          "2021": "https://www.acsac.org/2021/program/papers/",
+          "2022": "https://www.acsac.org/2022/program/papers/",
+          "2023": "https://www.acsac.org/2023/program/papers/",
+          "2024": "https://www.acsac.org/2024/program/"
+        },
+        "dblpKey": "conf/acsac"
+      },
+      "raid": {
+        "name": "International Symposium on Research in Attacks, Intrusions and Defenses (RAID)",
+        "shortName": "RAID",
+        "tier": "second",
+        "urls": {
+          "2020": "https://raid2020.org/accepted-papers/",
+          "2021": "https://dl.acm.org/doi/proceedings/10.1145/3471621",
+          "2022": "https://dblp.org/db/conf/raid/raid2022.html",
+          "2023": "https://dblp.org/db/conf/raid/raid2023.html",
+          "2024": "https://raid2024.github.io/accepted_open.html"
+        },
+        "dblpKey": "conf/raid"
+      },
+      "esorics": {
+        "name": "European Symposium on Research in Computer Security (ESORICS)",
+        "shortName": "ESORICS",
+        "tier": "second",
+        "urls": {
+          "2020": "https://dblp.org/db/conf/esorics/esorics2020-1.html",
+          "2021": "https://esorics2021.athene-center.de/program.php",
+          "2022": "https://esorics2022.compute.dtu.dk/program.html",
+          "2023": "https://esorics2023.org/program/",
+          "2024": "https://dblp.org/db/conf/esorics/esorics2024-1.html"
+        },
+        "dblpKey": "conf/esorics"
+      }
+    }
+  },
+  "dblpBaseUrl": "https://dblp.org/search/publ/api",
+  "alternativeSources": {
+    "dblp": {
+      "description": "DBLP Computer Science Bibliography - comprehensive paper database",
+      "searchUrl": "https://dblp.org/search/publ/api?q={query}+venue:{venue}&format=json",
+      "venueUrl": "https://dblp.org/db/conf/{venue}/index.html"
+    },
+    "semanticScholar": {
+      "description": "Semantic Scholar API for paper metadata",
+      "searchUrl": "https://api.semanticscholar.org/graph/v1/paper/search"
+    }
+  }
+}
