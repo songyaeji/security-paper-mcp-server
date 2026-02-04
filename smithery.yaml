@@ -1,10 +1,9 @@
-runtime: "container"
+runtime: "node"
 build:
-  dockerfile: "Dockerfile"
-  dockerBuildPath: "."
+  type: "npm"
+  package: "@songyaeji/security-paper-mcp-server"
 startCommand:
   type: "stdio"
-  command: ["python", "server.py"]
+  command: ["node", "dist/index.js"]
 env:
-  # Add any environment variables here if needed
-  PYTHONUNBUFFERED: "1"-
+  NODE_ENV: "production"
